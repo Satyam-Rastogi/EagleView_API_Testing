@@ -14,6 +14,8 @@ This repository contains a complete Python client library and example programs f
 - Property image downloading
 - Rate limiting and error handling
 
+For detailed API documentation, please refer to the [EagleView Developer Portal](https://developer.eagleview.com/).
+
 ## Features
 - **OAuth 2.0 Client Credentials Authentication**: Secure server-to-server authentication
 - **Property Data Access**: Retrieve detailed property information including roof analysis, structure measurements, and environmental factors
@@ -24,10 +26,14 @@ This repository contains a complete Python client library and example programs f
 - **Error Handling**: Automatic retry logic with exponential backoff
 - **Token Management**: Automatic token refresh and caching
 
+For detailed information about these features and the underlying APIs, please consult the [EagleView Developer Portal](https://developer.eagleview.com/).
+
 ## Prerequisites
 - Python 3.12 or higher
 - `requests` library
 - EagleView API credentials (client ID and secret)
+
+> To obtain API credentials, you'll need to register on the [EagleView Developer Portal](https://developer.eagleview.com/).
 
 ## Installation
 
