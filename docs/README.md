@@ -39,7 +39,7 @@ This repository contains a complete Python client library and example programs f
 
 2. Install the required dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r scripts/requirements.txt
    ```
 
 ## Sandbox Area Information
@@ -189,11 +189,11 @@ This step:
 Before running the scripts, you need to update the client credentials in each Python file:
 
 1. Open each Python file that makes API requests:
-   - `fetch_reports_client_credentials.py`
-   - `fetch_images_client_credentials.py`
-   - `fetch_and_download_reports.py`
-   - `demo_fetch_reports.py`
-   - `download_images.py`
+   - `src/core/fetch_reports_client_credentials.py`
+   - `src/core/fetch_images_client_credentials.py`
+   - `src/core/fetch_and_download_reports.py`
+   - `src/demos/demo_fetch_reports.py`
+   - `src/core/download_images.py`
 
 2. Find the configuration section and replace the placeholder values:
    ```python
@@ -210,41 +210,41 @@ Before running the scripts, you need to update the client credentials in each Py
 
 ### Run the complete demo workflow:
 ```bash
-python fetch_reports_client_credentials.py
-python fetch_images_client_credentials.py
-python download_images.py
+python src/core/fetch_reports_client_credentials.py
+python src/core/fetch_images_client_credentials.py
+python src/core/download_images.py
 ```
 
 ### Alternative: Run individual components:
 1. Request property data:
    ```bash
-   python fetch_reports_client_credentials.py
+   python src/core/fetch_reports_client_credentials.py
    ```
 
 2. Request imagery data:
    ```bash
-   python fetch_images_client_credentials.py
+   python src/core/fetch_images_client_credentials.py
    ```
 
 3. Fetch and download measurement/order reports:
    ```bash
-   python fetch_and_download_reports.py
+   python src/core/fetch_and_download_reports.py
    ```
 
 4. Demo report information fetching:
    ```bash
-   python demo_fetch_reports.py
+   python src/demos/demo_fetch_reports.py
    ```
 
 5. Download property images:
    ```bash
-   python download_images.py
+   python src/core/download_images.py
    ```
 
 ### View demo information:
 ```bash
-python demo_run.py
-python demo_overview.py
+python src/demos/demo_run.py
+python src/demos/demo_overview.py
 ```
 
 ## Docker Support
@@ -253,7 +253,7 @@ You can also run this project using Docker:
 
 1. Build the Docker image:
    ```bash
-   docker build -t eagleview-api-client .
+   docker build -f scripts/Dockerfile -t eagleview-api-client .
    ```
 
 2. Run the demo:
@@ -263,40 +263,74 @@ You can also run this project using Docker:
 
 ## Project Structure
 
-### Core Library
+### Core Library (`src/core/`)
 - `client_credentials_eagleview.py` - Main client library with authentication and API methods
-
-### Main Programs
 - `fetch_reports_client_credentials.py` - Requests property data for locations within the sandbox area
 - `fetch_images_client_credentials.py` - Retrieves imagery information for locations within the sandbox area
 - `fetch_and_download_reports.py` - Fetches measurement/order reports and downloads associated files
-- `demo_fetch_reports.py` - Demonstrates report information fetching without downloading
 - `download_images.py` - Downloads actual property images using image tokens
 
-### Demo Scripts
+### Demo Scripts (`src/demos/`)
+- `demo_fetch_reports.py` - Demonstrates report information fetching without downloading
 - `demo_run.py` - Demo execution script
 - `demo_overview.py` - Demo overview script
 
-### Utility Scripts
+### Test Scripts (`src/tests/`)
 - `test_additional_data.py` - Additional location testing
 - `test_custom_locations.py` - Custom location testing
 - `test_address_requests.py` - Address-based request testing
+
+### Utility Scripts (`src/utils/`)
+- `download_address_images.py` - Address-based image downloading
 - `download_all_test_images.py` - Comprehensive image downloading
+- `demo_info.bat` - Batch script for demo information
+
+### Data Files (`data/`)
+- `requests/` - API request data files
+- `results/` - API result data files
+- `imagery/` - Imagery data files
+- `tokens/` - Authentication tokens
+
+### Images (`images/`)
+- `samples/` - Sample images included in the repository
+- `downloaded/` - Downloaded images from API requests
+- `processed/` - Processed images (if any)
+
+### Documentation (`docs/`)
+- `api/` - API documentation
+- `guides/` - User guides
+- `technical/` - Technical documentation
+- Main documentation files (README.md, etc.)
+
+### Configuration (`config/`)
+- Configuration files for the application
+
+### Scripts (`scripts/`)
+- `Dockerfile` - Docker configuration
+- `Makefile` - Makefile for building
+- `setup.py` - Setup script
+- `requirements.txt` - Python dependencies
+- `pyproject.toml` - Project configuration
+
+### Outputs (`outputs/`)
+- Log files
+- Compiled Python files
+- Package information
 
 ## Output Files
 
-### JSON Data Files
-- Property data requests and results
-- Imagery data requests and responses
-- Authentication tokens (cached for efficiency)
+### JSON Data Files (`data/`)
+- Property data requests and results (`data/requests/` and `data/results/`)
+- Imagery data requests and responses (`data/imagery/`)
+- Authentication tokens (cached for efficiency in `data/tokens/`)
 
-### Image Directories
-- `downloaded_property_images/` - Original demo images (sample images included in repository)
-- `custom_location_images/` - Images from custom location tests
-- `address_based_images/` - Images from address-based request tests
+### Image Directories (`images/`)
+- `samples/` - Sample images included in the repository
+- `downloaded/` - Images downloaded from API requests (in subdirectories)
+- `processed/` - Processed images (if any)
 
 ### Sample Images
-The repository now includes sample images in the `downloaded_property_images/` directory to demonstrate the types of property imagery available through the EagleView API. These images include:
+The repository now includes sample images in the `images/samples/` directory to demonstrate the types of property imagery available through the EagleView API. These images include:
 
 - **Ortho Images**: Top-down aerial views showing property footprints
 - **Oblique Images**: Angled views from cardinal directions (North, East, South, West) showing building sides and roof structures
