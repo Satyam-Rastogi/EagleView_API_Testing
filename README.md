@@ -42,6 +42,40 @@ This repository contains a complete Python client library and example programs f
    pip install -r requirements.txt
    ```
 
+## Sandbox Area Information
+
+The EagleView API sandbox environment is limited to a specific geographic area in Omaha, Nebraska. All API requests must use coordinates within this bounding box to work in the sandbox environment.
+
+### Bounding Box Coordinates
+- **Minimum Latitude:** 41.24140396772262
+- **Maximum Latitude:** 41.25672882015283
+- **Minimum Longitude:** -96.00532698173473
+- **Maximum Longitude:** -95.97589954958912
+
+### Valid ZIP Codes in Sandbox Area
+The sandbox area primarily covers parts of Omaha, Nebraska, including ZIP codes such as:
+- 68106
+- 68105
+- 68104
+- 68102
+- 68131
+
+### Sample Coordinates Within Sandbox Area
+These coordinates are confirmed to work within the sandbox environment:
+
+1. **Central Location**: (41.25, -95.99)
+2. **Downtown Omaha**: (41.248, -95.985)
+3. **Midtown Omaha**: (41.252, -95.995)
+4. **North Omaha**: (41.243, -95.978)
+5. **South Omaha**: (41.255, -96.0)
+6. **West Omaha**: (41.245, -95.98)
+7. **East Omaha**: (41.251, -95.992)
+
+### Important Notes
+- API requests outside of this bounding box will fail with permission errors in the sandbox environment
+- For production access, contact EagleView support for additional scopes and geographic coverage
+- The sandbox environment provides access to a limited but representative dataset for testing purposes
+
 ## Configuration
 
 Before running the scripts, you need to update the client credentials in each Python file:
