@@ -16,6 +16,21 @@ This repository contains a complete Python client library and example programs f
 
 For detailed API documentation, please refer to the [EagleView Developer Portal](https://developer.eagleview.com/).
 
+## What is EagleView?
+
+EagleView is a technology company that provides aerial property imaging and analysis services. Using high-resolution aerial photographs, EagleView creates detailed property reports that include measurements, roof analysis, and other important property characteristics. This information is valuable for insurance companies, roofing contractors, real estate professionals, and city planners.
+
+## What Does This Code Do?
+
+This repository contains a Python-based client that demonstrates how to interact with the EagleView API. The code shows how to:
+
+- Automatically retrieve property data using addresses or coordinates
+- Access high-resolution aerial images of properties
+- Download detailed property reports
+- Handle authentication and rate limiting
+
+Think of it as a bridge between your applications and EagleView's powerful property analysis capabilities. Instead of manually requesting property information through a web interface, this code allows you to programmatically access the same data, making it possible to process many properties automatically.
+
 ## Features
 - **OAuth 2.0 Client Credentials Authentication**: Secure server-to-server authentication
 - **Property Data Access**: Retrieve detailed property information including roof analysis, structure measurements, and environmental factors
@@ -190,6 +205,16 @@ This step:
 - **Token-Based Security**: Each image requires a specific token, preventing unauthorized access
 - **Geographic Restriction**: Only locations within the Omaha bounding box return image data
 
+## In Simple Terms: How This Works
+
+Think of this process like ordering photos from a property database:
+
+1. **Request Property Information**: You tell the system "I want information about the property at this address/coordinate"
+2. **Receive a List of Available Images**: The system responds with a list of all available photos of that property (like a menu of photos)
+3. **Download the Photos**: For each photo you want, you use a special "ticket" (token) to actually download it
+
+This is similar to ordering items from a catalog - you first ask for the catalog (property data), then you see what's available (image list), and finally you purchase what you want (download images).
+
 ## Configuration
 
 Before running the scripts, you need to update the client credentials in each Python file:
@@ -249,6 +274,22 @@ python src/core/download_images.py
    ```bash
    python src/core/download_images.py
    ```
+
+### Quick Win: See Results Fast
+
+To quickly see what this code can do, try running this simple example:
+
+1. Make sure you've updated your credentials in `src/core/fetch_reports_client_credentials.py`
+2. Run this command:
+   ```bash
+   python src/core/fetch_reports_client_credentials.py
+   ```
+3. This will:
+   - Request property data for sample locations in Omaha
+   - Save the results as JSON files in the current directory
+   - Download actual property images to the `downloaded_property_images` folder
+
+Within a few minutes, you'll have real property data and images that demonstrate the capabilities of the EagleView API!
 
 ### View demo information:
 ```bash
