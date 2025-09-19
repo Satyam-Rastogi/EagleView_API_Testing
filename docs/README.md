@@ -31,6 +31,30 @@ This repository contains a Python-based client that demonstrates how to interact
 
 Think of it as a bridge between your applications and EagleView's powerful property analysis capabilities. Instead of manually requesting property information through a web interface, this code allows you to programmatically access the same data, making it possible to process many properties automatically.
 
+## What Information Do We Send?
+
+To retrieve property data from EagleView, we need to send specific information:
+
+### 1. Authentication Credentials
+Before we can access any data, we need to prove we're authorized to use the API:
+- **Client ID**: Like a username that identifies your application
+- **Client Secret**: Like a password that authenticates your application
+
+These credentials are obtained by registering on the EagleView Developer Portal.
+
+### 2. Property Location Information
+To get information about a specific property, we send either:
+- **Coordinates**: Latitude and longitude values (e.g., 41.25, -95.99)
+- **Address**: A complete street address (e.g., "123 Main Street, Omaha, NE 68102")
+
+### 3. Request Parameters
+We also specify what type of information we want:
+- **Property details**: Roof measurements, structure information, environmental factors
+- **Images**: Aerial photos from different angles
+- **Reports**: Measurement reports and other deliverables
+
+Think of it like filling out a form - we tell EagleView exactly what property we're interested in and what information we want about it.
+
 ## Features
 - **OAuth 2.0 Client Credentials Authentication**: Secure server-to-server authentication
 - **Property Data Access**: Retrieve detailed property information including roof analysis, structure measurements, and environmental factors
@@ -214,6 +238,41 @@ Think of this process like ordering photos from a property database:
 3. **Download the Photos**: For each photo you want, you use a special "ticket" (token) to actually download it
 
 This is similar to ordering items from a catalog - you first ask for the catalog (property data), then you see what's available (image list), and finally you purchase what you want (download images).
+
+## Data Flow: What We Send and Receive
+
+Here's a visual representation of the information flow when using this API client:
+
+```
+┌─────────────────┐    1. Credentials + Location    ┌──────────────────┐
+│   Your          │ ────────────────────────────────→ │   EagleView      │
+│   Application   │                                   │   API            │
+│                 │ ←──────────────────────────────── │                  │
+└─────────────────┘    2. Property Data + Image List  └──────────────────┘
+                                                       │
+                                                       │ 3. Image Tokens
+                                                       ↓
+┌─────────────────┐                                   ┌──────────────────┐
+│   Downloaded    │ ←──────────────────────────────── │   Image Files    │
+│   Images        │    4. Actual Image Downloads     │   (PNG/JPEG)     │
+└─────────────────┘                                   └──────────────────┘
+```
+
+**Step-by-step breakdown:**
+
+1. **What We Send**: 
+   - Client ID and Secret (for authentication)
+   - Property coordinates or address (to identify what we want)
+
+2. **What We Receive**:
+   - Property details (measurements, roof info, etc.)
+   - List of available images with unique tokens
+
+3. **What We Send (again)**:
+   - Image tokens (to request specific images)
+
+4. **What We Receive**:
+   - Actual image files that can be saved locally
 
 ## Configuration
 
