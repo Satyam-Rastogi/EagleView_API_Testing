@@ -1,0 +1,49 @@
+{
+  "captures": [
+    {
+      "capture": {
+        "urn": "urn:eagleview.com:v1:spatial-data:capture:fixed-wing-pacific:24b83f60-0e3d-15e1-04e2-03faa8bbd860",
+        "start_date": "2024-03-20",
+        "end_date": "2024-03-29"
+      },
+      "obliques": {
+        "north": {
+          "images": [
+            {
+              "urn": "urn:eagleview.com:v4:spatial-data:raster:visual:ated:Tk_5yxIfqkyLAzjM_boYsA:6951"
+            }
+          ]
+        },
+        "east": {
+          "images": [
+            {
+              "urn": "urn:eagleview.com:v4:spatial-data:raster:visual:ated:Tk_5yxIfqkyLAzjM_boYsA:23272"
+            }
+          ]
+        },
+        "south": {
+          "images": [
+            {
+              "urn": "urn:eagleview.com:v4:spatial-data:raster:visual:ated:Tk_5yxIfqkyLAzjM_boYsA:1420"
+            }
+          ]
+        },
+        "west": {
+          "images": [
+            {
+              "urn": "urn:eagleview.com:v4:spatial-data:raster:visual:ated:Tk_5yxIfqkyLAzjM_boYsA:12659"
+            }
+          ]
+        }
+      },
+      "orthos": {
+        "images": [
+          {
+            "urn": "urn:eagleview.com:v4:spatial-data:raster:visual:ated:kC5i5tnYmEiU6OMmzpMX6g:0"
+          }
+        ]
+      }
+    }
+  ],
+  "next_capture_token": "eyJiZWZvcmVfY2FwdHVyZV91cm4iOiJ1cm46ZWFnbGV2aWV3LmNvbTp2MTpzcGF0aWFsLWRhdGE6Y2FwdHVyZTpmaXhlZC13aW5nLXBhY2lmaWM6MjRiODNmNjAtMGUzZC0xNWUxLTA0ZTItMDNmYWE4YmJkODYwIn0K"
+}

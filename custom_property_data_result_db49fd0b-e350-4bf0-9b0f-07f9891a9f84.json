@@ -1,0 +1,1136 @@
+{
+  "input": {
+    "coordinates": {
+      "lat": 41.251,
+      "lon": -95.992
+    }
+  },
+  "request": {
+    "id": "db49fd0b-e350-4bf0-9b0f-07f9891a9f84",
+    "status": "Complete"
+  },
+  "response_coordinates": {
+    "lat": 41.251072,
+    "lon": -95.992129
+  },
+  "response_address": {
+    "full_address": "835 S 51st St, Omaha, NE  68106-1710",
+    "line1": "835 S 51st St",
+    "locality": "Omaha",
+    "admin1": "NE",
+    "zip": "68106",
+    "country": "US"
+  },
+  "property_images": {
+    "image_references": [
+      "image_1",
+      "image_2",
+      "image_3",
+      "image_4",
+      "image_5",
+      "image_6"
+    ]
+  },
+  "imagery": {
+    "image_1": {
+      "image_token": "ce13ed02-ee4e-44ae-8f9b-672b63e76774",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "masked": false,
+        "shot_date": "03/25/2025",
+        "view": "ortho"
+      }
+    },
+    "image_10": {
+      "image_token": "8b5e5f9a-5e8c-4bb8-abb0-fb06e867fac9",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "cardinal_direction": "east",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_11": {
+      "image_token": "6fca7ca1-639c-444c-9b18-d94993810d80",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "cardinal_direction": "south",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_12": {
+      "image_token": "6d45b118-e98c-42e4-896e-fffea3de9b28",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "cardinal_direction": "west",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_13": {
+      "image_token": "4ebfbd25-fded-43f5-b443-71eccfe98bc5",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_14": {
+      "image_token": "bbf28551-0cdb-42b3-aed0-91af60690614",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_15": {
+      "image_token": "76432ff0-b3d2-45b8-8d4e-d7e4957dafc6",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_16": {
+      "image_token": "e2ac6a3b-327e-4880-ba7c-de863b830fa1",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_17": {
+      "image_token": "00dddcff-60aa-4f0a-9e60-409ea816ee66",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_18": {
+      "image_token": "fc9882a4-4c7e-4a43-9d05-8875755f9161",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_19": {
+      "image_token": "dc960a59-0e46-4545-b555-6cddf1953bff",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_2": {
+      "image_token": "faf1149e-a524-40e8-9791-4509be43b2e0",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "masked": true,
+        "shot_date": "03/25/2025",
+        "view": "ortho"
+      }
+    },
+    "image_20": {
+      "image_token": "ed13fa26-7f2b-44d1-99eb-5e9aa888ab65",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_21": {
+      "image_token": "94b59058-7133-4281-9d22-caf2ab811ad0",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_22": {
+      "image_token": "179eedfb-fd91-4678-8bb3-df307e57f477",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_23": {
+      "image_token": "82960677-3631-4dcc-be36-7390066b8c4a",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_24": {
+      "image_token": "c7a430a3-e8fd-4ef9-bddd-1375ae5e5f74",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_25": {
+      "image_token": "838054ec-b7b7-420b-87be-94546b1961d1",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_26": {
+      "image_token": "f38e1391-bdf9-41b5-bf03-9ee7e64462d9",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_27": {
+      "image_token": "f10f6f81-9f7a-4562-8a7a-1d22d3e0bf69",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_28": {
+      "image_token": "4191d2a7-f0ae-4406-8b93-a02b44b3fdcc",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_29": {
+      "image_token": "d55190c1-4897-4c8e-be8b-3555a9aff121",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_3": {
+      "image_token": "fbe3abd3-00c3-4e92-856a-c1208837297f",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "cardinal_direction": "north",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_30": {
+      "image_token": "6cfe93cc-8590-4b16-999d-fe83d91c9f8f",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_31": {
+      "image_token": "da04beff-1652-4e53-82dd-17aa91f45e3f",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_32": {
+      "image_token": "6d2ecc4c-64d3-410b-8c16-675ea20a747a",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_33": {
+      "image_token": "caae9a82-793f-47b6-be19-81145e58f589",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_34": {
+      "image_token": "ce27937c-c26c-4cb6-803b-509c0ef5bed1",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_35": {
+      "image_token": "e7b4b0e2-a3ba-4da0-9a20-89bfea8c913e",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_36": {
+      "image_token": "6592aec2-66c5-4002-a9b2-a943841817b8",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_37": {
+      "image_token": "e1241510-9028-4025-84ee-bce5c47da2f2",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_38": {
+      "image_token": "0a1f719b-e666-47c7-b5c8-d48c3dfda7ec",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_39": {
+      "image_token": "295bc562-d7f5-422b-8124-d9ea6a3e12b5",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_4": {
+      "image_token": "0b071c1d-b777-4feb-a645-e80cd5f1122b",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "cardinal_direction": "east",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_40": {
+      "image_token": "ffb86e3e-c4be-40d9-ab94-126b20f3b302",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_41": {
+      "image_token": "5d9bfdf9-ca4f-4af5-959a-8d25777a44ea",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_42": {
+      "image_token": "b69bb9b3-e3cb-4363-8c4c-8718b5db3612",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_43": {
+      "image_token": "3a2c83a1-2d71-4758-905a-e47cbded4b1c",
+      "metadata": {
+        "bbox": null,
+        "description": null,
+        "masked": false,
+        "shot_date": "03/13/2025",
+        "view": "ortho"
+      }
+    },
+    "image_44": {
+      "image_token": "2712746a-29cc-4fb0-b527-71047b8a9934",
+      "metadata": {
+        "bbox": null,
+        "description": "Imagery after permit/property record",
+        "masked": false,
+        "shot_date": "04/14/2016",
+        "view": "ortho"
+      }
+    },
+    "image_45": {
+      "image_token": "0f05cd64-3488-4742-81bb-e02508f716d4",
+      "metadata": {
+        "bbox": null,
+        "description": "Latest available imagery",
+        "masked": false,
+        "shot_date": "03/19/2025",
+        "view": "ortho"
+      }
+    },
+    "image_5": {
+      "image_token": "23b361eb-0b6b-4f44-bb8f-2b13304039af",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "cardinal_direction": "south",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_6": {
+      "image_token": "5937d576-dee4-4a44-9ed2-3483a2c501ff",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99232765350271,
+            41.250951344931096,
+            -95.99178534654368,
+            41.25120865439895
+          ]
+        },
+        "cardinal_direction": "west",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    },
+    "image_7": {
+      "image_token": "4df640ee-97c4-48d4-b578-e5cd2bbe1c31",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "masked": false,
+        "shot_date": "03/25/2025",
+        "view": "ortho"
+      }
+    },
+    "image_8": {
+      "image_token": "49c8f2c4-781c-45af-b86a-2ad7ad77459c",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "masked": true,
+        "shot_date": "03/25/2025",
+        "view": "ortho"
+      }
+    },
+    "image_9": {
+      "image_token": "7c37756d-ab83-479d-8e8c-39f345ea34da",
+      "metadata": {
+        "bbox": {
+          "epsg": "EPSG:4326",
+          "value": [
+            -95.99222944769642,
+            41.25097906641916,
+            -95.99199800994636,
+            41.25119202828466
+          ]
+        },
+        "cardinal_direction": "north",
+        "shot_date": "03/25/2025",
+        "view": "oblique"
+      }
+    }
+  },
+  "pool": {
+    "property_pool_enclosure_presence": {
+      "confidence": 0.9996,
+      "image_references": [
+        "image_19"
+      ],
+      "unit": "classifier",
+      "value": "no"
+    },
+    "property_pool_presence": {
+      "confidence": -1,
+      "image_references": [
+        "image_18"
+      ],
+      "unit": "classifier",
+      "value": "no"
+    },
+    "property_pool_condition_rating": {},
+    "property_pool_occlusion_classification": {},
+    "property_pool_structure_type": {},
+    "property_pool_slide_presence": {}
+  },
+  "trampoline": {
+    "property_trampoline_presence": {
+      "confidence": -1,
+      "image_references": [
+        "image_20"
+      ],
+      "unit": "classifier",
+      "value": "no"
+    }
+  },
+  "structures": [
+    {
+      "structure_geometry": {
+        "coordinates": [
+          [
+            [
+              -95.992169796,
+              41.251120368
+            ],
+            [
+              -95.992132903,
+              41.251132588
+            ],
+            [
+              -95.992058534,
+              41.25112626
+            ],
+            [
+              -95.992057662,
+              41.251039631
+            ],
+            [
+              -95.992114891,
+              41.251050105
+            ],
+            [
+              -95.992129126,
+              41.251050105
+            ],
+            [
+              -95.992168925,
+              41.25103854
+            ],
+            [
+              -95.992169796,
+              41.251120368
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "structure_images": {
+        "image_references": [
+          "image_8",
+          "image_9",
+          "image_10",
+          "image_11",
+          "image_12",
+          "image_7"
+        ]
+      },
+      "roof": {
+        "structure_roof_predominant_pitch": {
+          "confidence": -1,
+          "unit": "over 12",
+          "value": 11
+        },
+        "structure_roof_shape": {
+          "confidence": 0.8696,
+          "image_references": [
+            "image_32"
+          ],
+          "unit": "classifier",
+          "value": "gable"
+        },
+        "structure_roof_material_primary": {
+          "confidence": 0.989,
+          "image_references": [
+            "image_41"
+          ],
+          "unit": "classifier",
+          "value": "shingle"
+        },
+        "structure_tree_overhang_classification": {
+          "confidence": 0.6779,
+          "image_references": [
+            "image_43"
+          ],
+          "unit": "classifier",
+          "value": "tree_overhang_minor"
+        },
+        "structure_roof_condition_elements": {
+          "structure_roof_loose_organic_matter": {},
+          "structure_roof_material_degradation": {
+            "confidence": 0.9363,
+            "unit": "classifier",
+            "value": "no_roof_material_degradation"
+          },
+          "structure_roof_material_degradation_reason": {},
+          "structure_roof_natural_discoloration": {
+            "confidence": 0.5666,
+            "unit": "classifier",
+            "value": "roof_discoloration_minor"
+          },
+          "structure_roof_patching": {
+            "confidence": 0.9897,
+            "unit": "classifier",
+            "value": "no"
+          },
+          "structure_roof_ponding": {
+            "confidence": 0.7121,
+            "unit": "classifier",
+            "value": "yes"
+          },
+          "structure_roof_tarp": {
+            "confidence": 0.9957,
+            "unit": "classifier",
+            "value": "no"
+          },
+          "structure_roof_streaking": {
+            "confidence": 0.7207,
+            "unit": "classifier",
+            "value": "no_roof_streaking"
+          },
+          "image_references": [
+            "image_42"
+          ]
+        },
+        "structure_roof_area": {
+          "confidence": -1,
+          "unit": "square feet",
+          "value": 1257.2
+        },
+        "structure_roof_area_squares": {
+          "confidence": -1,
+          "unit": "count",
+          "value": 13
+        },
+        "structure_roof_condition_rating": {
+          "confidence": 0.8268,
+          "image_references": [
+            "image_35"
+          ],
+          "reasons": [
+            "roof_ponding"
+          ],
+          "unit": "rating",
+          "value": "fair"
+        },
+        "structure_roof_occlusion_classification": {
+          "confidence": 0.5691,
+          "image_references": [
+            "image_33"
+          ],
+          "unit": "classifier",
+          "value": "roof_occlusion_minor"
+        },
+        "structure_roof_solar_panel_presence": {
+          "confidence": -1,
+          "image_references": [
+            "image_38"
+          ],
+          "unit": "classifier",
+          "value": "no"
+        },
+        "structure_roof_extension": {
+          "confidence": 0.5216,
+          "image_references": [
+            "image_37"
+          ],
+          "unit": "classifier",
+          "value": "yes"
+        },
+        "structure_roof_facet_count": {
+          "confidence": 0.5419,
+          "image_references": [
+            "image_39"
+          ],
+          "unit": "count",
+          "value": 4
+        },
+        "structure_roof_air_conditioner_count": {
+          "confidence": -1,
+          "image_references": [
+            "image_36"
+          ],
+          "unit": "count",
+          "value": 0
+        },
+        "structure_roof_evaporative_cooler_count": {
+          "confidence": -1,
+          "image_references": [
+            "image_34"
+          ],
+          "unit": "count",
+          "value": 0
+        },
+        "structure_roof_facets": [
+          {
+            "area": {
+              "confidence": -1,
+              "unit": "square feet",
+              "value": 679.6335811037669
+            },
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    -95.99212362292052,
+                    41.25105192384106
+                  ],
+                  [
+                    -95.99205806099816,
+                    41.25103995695364
+                  ],
+                  [
+                    -95.99205806099816,
+                    41.2511504205298
+                  ],
+                  [
+                    -95.9921288262477,
+                    41.2511471986755
+                  ],
+                  [
+                    -95.9921288262477,
+                    41.25113385099338
+                  ],
+                  [
+                    -95.99212258225509,
+                    41.251134771523176
+                  ],
+                  [
+                    -95.99212362292052,
+                    41.25105192384106
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "roof_material_primary": {
+              "confidence": -1,
+              "unit": "classifier",
+              "value": "shingle"
+            }
+          },
+          {
+            "area": {
+              "confidence": -1,
+              "unit": "square feet",
+              "value": 392.2940427129013
+            },
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    -95.99212362292052,
+                    41.25105192384106
+                  ],
+                  [
+                    -95.99212258225509,
+                    41.251134771523176
+                  ],
+                  [
+                    -95.99217045286507,
+                    41.251120963576156
+                  ],
+                  [
+                    -95.99217045286507,
+                    41.25103857615894
+                  ],
+                  [
+                    -95.99216941219963,
+                    41.25103857615894
+                  ],
+                  [
+                    -95.99212362292052,
+                    41.25105192384106
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "roof_material_primary": {
+              "confidence": -1,
+              "unit": "classifier",
+              "value": "shingle"
+            }
+          }
+        ],
+        "structure_roof_materials": [
+          {
+            "area": {
+              "confidence": 0.989,
+              "unit": "square feet",
+              "value": 1220
+            },
+            "confidence": 0.989,
+            "geometry": {
+              "coordinates": [
+                [
+                  [
+                    -95.992115,
+                    41.251134
+                  ],
+                  [
+                    -95.992127,
+                    41.251104
+                  ],
+                  [
+                    -95.992165,
+                    41.251104
+                  ],
+                  [
+                    -95.992166,
+                    41.251024
+                  ],
+                  [
+                    -95.992123,
+                    41.251016
+                  ],
+                  [
+                    -95.992048,
+                    41.25102
+                  ],
+                  [
+                    -95.992047,
+                    41.251132
+                  ],
+                  [
+                    -95.992115,
+                    41.251134
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+            },
+            "image_references": [
+              "image_40"
+            ],
+            "unit": "classifier",
+            "value": "shingle"
+          }
+        ],
+        "structure_roof_age": {
+          "confidence": 0.6,
+          "image_references": [
+            "image_44",
+            "image_45"
+          ],
+          "reasons": [
+            "estimated with imagery"
+          ],
+          "unit": "years",
+          "value": 11,
+          "year_built": ""
+        }
+      },
+      "structure_eave_height": {},
+      "structure_centroid": {
+        "lat": 41.251086873,
+        "lon": -95.992113387
+      },
+      "structure_wildfire_mitigation_rating": {
+        "confidence": -1,
+        "image_references": [
+          "image_31"
+        ],
+        "unit": "rating",
+        "value": 7
+      },
+      "structure_footprint_sqft": {
+        "confidence": -1,
+        "unit": "square feet",
+        "value": 1220
+      },
+      "structure_hail_vulnerability_rating": {
+        "confidence": -1,
+        "image_references": [
+          "image_25"
+        ],
+        "reasons": [
+          "roof_age",
+          "roof_condition_rating",
+          "roof_covering"
+        ],
+        "unit": "rating",
+        "value": 6
+      },
+      "structure_vegetation_setback": {
+        "vegetation_setback": {
+          "confidence": -1,
+          "unit": "feet",
+          "value": 0
+        },
+        "image_references": [
+          "image_30"
+        ]
+      },
+      "structure_hail_loss_severity_rating": {
+        "confidence": -1,
+        "image_references": [
+          "image_29"
+        ],
+        "unit": "rating",
+        "value": 4
+      },
+      "structure_density_zones": {
+        "structure_density_zone_1": {
+          "confidence": -1,
+          "unit": "ratio",
+          "value": 0.18
+        },
+        "structure_density_zone_2": {
+          "confidence": -1,
+          "unit": "ratio",
+          "value": 0.2
+        },
+        "image_references": [
+          "image_22"
+        ]
+      },
+      "structure_count_zones": {
+        "structure_count_zone_1": {
+          "confidence": -1,
+          "unit": "structures",
+          "value": 2
+        },
+        "structure_count_zone_2": {
+          "confidence": -1,
+          "unit": "structures",
+          "value": 30
+        },
+        "image_references": [
+          "image_26"
+        ]
+      },
+      "structure_chimney_presence": {
+        "confidence": 0.9611,
+        "image_references": [
+          "image_21"
+        ],
+        "unit": "classifier",
+        "value": "no"
+      },
+      "structure_setback": {
+        "confidence": -1,
+        "image_references": [
+          "image_23"
+        ],
+        "unit": "feet",
+        "value": 6
+      },
+      "structure_wood_deck_presence": {
+        "confidence": 0.9803,
+        "image_references": [
+          "image_24"
+        ],
+        "unit": "classifier",
+        "value": "no"
+      },
+      "structure_wildfire_vulnerability_rating": {
+        "confidence": -1,
+        "image_references": [
+          "image_27"
+        ],
+        "reasons": [
+          "structure_density_zone_1",
+          "roof_covering",
+          "yard_debris_coverage_pct"
+        ],
+        "unit": "rating",
+        "value": 7
+      },
+      "vegetation_coverage_zones": {
+        "vegetation_coverage_zone_1": {
+          "confidence": -1,
+          "unit": "ratio",
+          "value": 0.07
+        },
+        "vegetation_coverage_zone_2": {
+          "confidence": -1,
+          "unit": "ratio",
+          "value": 0.13
+        },
+        "vegetation_coverage_zone_3": {
+          "confidence": -1,
+          "unit": "ratio",
+          "value": 0.08
+        },
+        "image_references": [
+          "image_28"
+        ]
+      }
+    }
+  ],
+  "property_driveway_condition_rating": {
+    "confidence": -1,
+    "image_references": [
+      "image_14"
+    ],
+    "unit": "rating",
+    "value": "poor"
+  },
+  "property_lawn_condition_rating": {
+    "confidence": -1,
+    "image_references": [
+      "image_13"
+    ],
+    "unit": "rating",
+    "value": "fair"
+  },
+  "property_fence_presence": {
+    "confidence": 0.5312,
+    "image_references": [
+      "image_16"
+    ],
+    "unit": "classifier",
+    "value": "yes"
+  },
+  "property_fence_material_combustibility": {
+    "confidence": 0.3941,
+    "image_references": [
+      "image_17"
+    ],
+    "unit": "classifier",
+    "value": "non_combustible"
+  },
+  "property_yard_debris": {
+    "area": {
+      "confidence": -1,
+      "unit": "percent",
+      "value": 0
+    },
+    "coverage": {
+      "confidence": -1,
+      "unit": "square feet",
+      "value": 0
+    },
+    "image_references": [
+      "image_15"
+    ]
+  },
+  "property_accessory_structure_roof_condition_rating": {},
+  "info": {}
+}

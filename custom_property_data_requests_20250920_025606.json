@@ -1,0 +1,47 @@
+[
+  {
+    "location_name": "Custom Location 1",
+    "coordinates": {
+      "lat": 41.251,
+      "lon": -95.992
+    },
+    "request_id": "db49fd0b-e350-4bf0-9b0f-07f9891a9f84",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/db49fd0b-e350-4bf0-9b0f-07f9891a9f84",
+        "id": "db49fd0b-e350-4bf0-9b0f-07f9891a9f84",
+        "status": "In Progress"
+      }
+    }
+  },
+  {
+    "location_name": "Custom Location 2",
+    "coordinates": {
+      "lat": 41.247,
+      "lon": -95.988
+    },
+    "request_id": "78f7ae36-44f9-4aed-a09a-31af594ea90b",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/78f7ae36-44f9-4aed-a09a-31af594ea90b",
+        "id": "78f7ae36-44f9-4aed-a09a-31af594ea90b",
+        "status": "In Progress"
+      }
+    }
+  },
+  {
+    "location_name": "Custom Location 3",
+    "coordinates": {
+      "lat": 41.254,
+      "lon": -95.998
+    },
+    "request_id": "6c0c0955-972a-42ff-beb0-3cefff1824e4",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/6c0c0955-972a-42ff-beb0-3cefff1824e4",
+        "id": "6c0c0955-972a-42ff-beb0-3cefff1824e4",
+        "status": "In Progress"
+      }
+    }
+  }
+]

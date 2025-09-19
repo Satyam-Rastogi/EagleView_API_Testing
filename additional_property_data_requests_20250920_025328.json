@@ -1,0 +1,47 @@
+[
+  {
+    "location_name": "Downtown Omaha",
+    "coordinates": {
+      "lat": 41.248,
+      "lon": -95.985
+    },
+    "request_id": "e64c8e4e-b8f7-473f-8d08-29156bbd003f",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/e64c8e4e-b8f7-473f-8d08-29156bbd003f",
+        "id": "e64c8e4e-b8f7-473f-8d08-29156bbd003f",
+        "status": "In Progress"
+      }
+    }
+  },
+  {
+    "location_name": "Midtown Omaha",
+    "coordinates": {
+      "lat": 41.252,
+      "lon": -95.995
+    },
+    "request_id": "7c49467a-3fc0-4d2e-b980-dc0e99e5ed57",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/7c49467a-3fc0-4d2e-b980-dc0e99e5ed57",
+        "id": "7c49467a-3fc0-4d2e-b980-dc0e99e5ed57",
+        "status": "In Progress"
+      }
+    }
+  },
+  {
+    "location_name": "North Omaha",
+    "coordinates": {
+      "lat": 41.243,
+      "lon": -95.978
+    },
+    "request_id": "8e76f45f-b7a0-4251-8554-465fbbb8bd79",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/8e76f45f-b7a0-4251-8554-465fbbb8bd79",
+        "id": "8e76f45f-b7a0-4251-8554-465fbbb8bd79",
+        "status": "In Progress"
+      }
+    }
+  }
+]

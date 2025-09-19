@@ -1,0 +1,24 @@
+[
+  {
+    "address": "965 S 50th St, Omaha, NE 68106",
+    "request_id": "f0663526-d75d-499d-af08-1df40b28893f",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/f0663526-d75d-499d-af08-1df40b28893f",
+        "id": "f0663526-d75d-499d-af08-1df40b28893f",
+        "status": "In Progress"
+      }
+    }
+  },
+  {
+    "address": "835 S 51st St, Omaha, NE 68106",
+    "request_id": "67f991bf-0a6a-4be0-ab07-97358d4ca3c2",
+    "response": {
+      "request": {
+        "href": "https://sandbox.apis.eagleview.com/property/v2/result/67f991bf-0a6a-4be0-ab07-97358d4ca3c2",
+        "id": "67f991bf-0a6a-4be0-ab07-97358d4ca3c2",
+        "status": "In Progress"
+      }
+    }
+  }
+]

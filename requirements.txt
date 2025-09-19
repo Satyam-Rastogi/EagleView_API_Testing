@@ -1,0 +1,2 @@
+# Python 3.12 required
+requests>=2.25.0
