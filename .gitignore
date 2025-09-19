@@ -53,6 +53,7 @@ downloaded_property_images/
 custom_location_images/
 address_based_images/
 eagleview_images/
+output/
 
 # Token files
 eagleview_client_credentials_tokens.json
@@ -62,3 +63,11 @@ eagleview_client_credentials_tokens.json
 
 # Zip files
 *.zip
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+
+# Docs (if generated)
+docs/_build/

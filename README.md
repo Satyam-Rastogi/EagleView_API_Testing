@@ -291,9 +291,17 @@ You can also run this project using Docker:
 - Authentication tokens (cached for efficiency)
 
 ### Image Directories
-- `downloaded_property_images/` - Original demo images
+- `downloaded_property_images/` - Original demo images (sample images included in repository)
 - `custom_location_images/` - Images from custom location tests
 - `address_based_images/` - Images from address-based request tests
+
+### Sample Images
+The repository now includes sample images in the `downloaded_property_images/` directory to demonstrate the types of property imagery available through the EagleView API. These images include:
+
+- **Ortho Images**: Top-down aerial views showing property footprints
+- **Oblique Images**: Angled views from cardinal directions (North, East, South, West) showing building sides and roof structures
+
+These sample images were generated using the sandbox API and represent typical property imagery available through EagleView's services.
 
 ## API Endpoints
 
