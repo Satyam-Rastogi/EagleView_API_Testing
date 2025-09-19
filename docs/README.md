@@ -350,6 +350,8 @@ These sample images were generated using the sandbox API and represent typical p
 ### Imagery API
 - **Get Imagery for Location:** `POST /imagery/v3/discovery/rank/location`
 
+> Note: The EagleView Imagery API primarily uses POST requests for querying imagery data. Image downloads themselves use GET requests with tokens as described in the Property Data V2 API section.
+
 ## Data Content
 
 ### Property Data Results
