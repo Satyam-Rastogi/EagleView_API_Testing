@@ -76,6 +76,57 @@ These coordinates are confirmed to work within the sandbox environment:
 - For production access, contact EagleView support for additional scopes and geographic coverage
 - The sandbox environment provides access to a limited but representative dataset for testing purposes
 
+## Image Types and Limitations
+
+### Image Categories
+The EagleView API provides two main categories of property images:
+
+1. **Ortho Images (Top-Down Views)**
+   - Direct vertical aerial photographs
+   - Provide a bird's-eye view of the property
+   - Useful for measuring property dimensions and footprint analysis
+
+2. **Oblique Images (Angled Views)**
+   - Taken at an angle from four cardinal directions:
+     - North-facing views
+     - East-facing views
+     - South-facing views
+     - West-facing views
+   - Provide detailed views of building sides, roof structures, and elevations
+   - Essential for roof analysis, siding assessment, and 3D modeling
+
+### Image Access Limitations
+
+#### Sandbox Environment Restrictions
+- **Geographic Limitation**: Images are only available for properties within the Omaha, Nebraska bounding box
+- **Data Set Limitation**: The sandbox contains a limited dataset representing a subset of EagleView's full imagery catalog
+- **Temporal Limitation**: Images in the sandbox may not represent the most current available imagery
+
+#### Technical Limitations
+- **Authentication Required**: All image downloads require valid OAuth 2.0 Client Credentials
+- **Rate Limiting**: Requests are subject to API rate limits (configurable in the client)
+- **Token-Based Access**: Individual images require specific image tokens obtained through property data requests
+- **Format Limitations**: Images are typically provided in PNG or JPEG formats
+
+#### Image Metadata
+Each image comes with metadata including:
+- **Shot Date**: When the image was captured
+- **View Type**: Whether it's ortho (top-down) or oblique (angled)
+- **Cardinal Direction**: For oblique images, the direction the camera was facing
+- **Bounding Box**: Geographic coordinates of the image coverage area
+- **Masking Information**: Whether the image has privacy or security masking applied
+
+### Image Resolution and Quality
+- **High Resolution**: Images are typically high-resolution suitable for detailed analysis
+- **Consistent Quality**: All images in the dataset maintain consistent quality standards
+- **Multi-Temporal**: Some properties may have imagery from different time periods
+
+### Accessing Images
+To access images:
+1. Request property data for a location within the sandbox area
+2. Extract image tokens and references from the property data response
+3. Use the image tokens to download specific images via the `/property/v2/image/{image_token}` endpoint
+
 ## Configuration
 
 Before running the scripts, you need to update the client credentials in each Python file:
