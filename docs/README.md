@@ -206,6 +206,9 @@ Before running the scripts, you need to update the client credentials in each Py
 
 3. Replace `YOUR_CLIENT_ID_HERE` and `YOUR_CLIENT_SECRET_HERE` with your actual EagleView API credentials.
 
+> ⚠️ **Important Note About Credentials**: 
+> Currently, the client credentials are hardcoded in the source files for testing purposes only. In a production environment, you should NEVER hardcode sensitive credentials in source code. We plan to migrate to using environment variables (via a `.env` file) in a future update to improve security. Always protect your API credentials and avoid committing them to version control systems.
+
 ## Usage
 
 ### Run the complete demo workflow:
@@ -371,3 +374,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Disclaimer
 
 This client is designed for use with the EagleView API sandbox environment. Ensure you have proper authorization and credentials before using with production APIs.
+
+> ⚠️ **Security Note**: 
+> This repository currently contains hardcoded client credentials for testing purposes. These should be replaced with your own credentials, and in production environments, you should use environment variables or other secure methods to manage sensitive information. Never commit real API credentials to version control systems.
