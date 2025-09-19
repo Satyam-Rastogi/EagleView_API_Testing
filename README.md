@@ -121,11 +121,68 @@ Each image comes with metadata including:
 - **Consistent Quality**: All images in the dataset maintain consistent quality standards
 - **Multi-Temporal**: Some properties may have imagery from different time periods
 
-### Accessing Images
-To access images:
-1. Request property data for a location within the sandbox area
-2. Extract image tokens and references from the property data response
-3. Use the image tokens to download specific images via the `/property/v2/image/{image_token}` endpoint
+## How Images Are Fetched
+
+The image fetching process involves a three-step workflow:
+
+### Step 1: Request Property Data by Coordinates
+To get images for a specific location, you must first request property data using latitude and longitude coordinates:
+
+```python
+# Example coordinates within Omaha sandbox
+lat, lon = 41.25, -95.99
+
+# Request property data
+response = client.request_property_data_by_coordinates(lat, lon)
+request_id = response['request']['id']
+```
+
+This step:
+- Takes latitude/longitude coordinates as input
+- Submits a request to the `/property/v2/request` endpoint
+- Returns a request ID for tracking the processing status
+
+### Step 2: Retrieve Property Data Results
+Once the property data processing is complete, retrieve the results which contain image information:
+
+```python
+# Get the property data result
+result = client.get_property_data_result(request_id)
+
+# Extract image references and tokens
+image_references = result['property_images']['image_references']
+imagery_data = result['imagery']
+```
+
+The result contains:
+- **Image References**: List of available image identifiers
+- **Imagery Data**: Detailed information for each image including tokens
+- **Image Tokens**: Unique identifiers required to download each specific image
+
+### Step 3: Download Images Using Tokens
+Use the image tokens to download the actual image files:
+
+```python
+# For each image reference
+for image_ref in image_references:
+    if image_ref in imagery_data:
+        image_token = imagery_data[image_ref]['image_token']
+        
+        # Download the image using the token
+        url = f"https://sandbox.apis.eagleview.com/property/v2/image/{image_token}"
+        response = requests.get(url, headers=headers)
+```
+
+This step:
+- Uses the image token in the URL path
+- Requires proper authentication headers
+- Downloads the actual image file content
+
+### Important Notes About Image Fetching
+- **Fixed Image Set**: Each property location has a predetermined set of images (typically 6-64 images)
+- **No Arbitrary Requests**: You cannot request additional images beyond what's provided in the property data
+- **Token-Based Security**: Each image requires a specific token, preventing unauthorized access
+- **Geographic Restriction**: Only locations within the Omaha bounding box return image data
 
 ## Configuration
 
