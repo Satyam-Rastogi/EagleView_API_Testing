@@ -23,9 +23,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Logs
-*.log
-
 # Environment files
 .env
 .venv
@@ -48,15 +45,20 @@ ENV/
 ehthumbs.db
 Thumbs.db
 
-# Output directories
-downloaded_property_images/
-custom_location_images/
-address_based_images/
-eagleview_images/
-output/
+# Output directories - ignore user-generated data but keep structure
+data/cache/*
+data/imagery/* 
+data/requests/*
+data/results/*
+data/tokens/*
 
-# Token files
+# Specific sensitive token file
 eagleview_client_credentials_tokens.json
+
+# Configuration files with real credentials (keep example templates)
+config/eagleview.yaml
+config/eagleview_sandbox.yaml
+config/eagleview_production.yaml
 
 # Log files
 *.log
@@ -71,3 +73,15 @@ eagleview_client_credentials_tokens.json
 
 # Docs (if generated)
 docs/_build/
+
+# Generated API data files (keep structure but ignore user-generated content)
+*_tokens.json
+*_requests_*.json
+*_reports_*.json
+*_results_*.json
+*_imagery_summary_*.json
+
+# Test files with sensitive data
+tests/sensitive_data/
+tests/integration/test_credentials.py
+tests/unit/test_credentials.py
