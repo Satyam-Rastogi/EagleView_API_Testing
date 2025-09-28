@@ -121,7 +121,7 @@ class PropertyDataService:
         
         # Use default directory if not specified
         if output_dir is None:
-            output_dir = get_data_directory("requests")
+            output_dir = get_data_directory("property_requests")
         
         filename = generate_timestamped_filename("eagleview_property_data_requests")
         filepath = f"{output_dir}/{filename}"

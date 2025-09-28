@@ -20,7 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description="EagleView API Client")
     parser.add_argument(
         '--operation', 
-        choices=['property-data', 'imagery', 'download-images', 'demo'],
+        choices=['property-data', 'property-results', 'imagery', 'download-images', 'download-reports', 'demo'],
         required=True,
         help='Operation to perform'
     )
@@ -86,7 +86,17 @@ def main():
         coordinates = parse_coordinates(args.coordinates) if args.coordinates else service.get_sandbox_coordinates()
         requests_data = service.submit_coordinates_requests(coordinates)
         if requests_data:
-            service.save_requests_data(requests_data, args.output_dir)
+            # For property data requests, don't override the service's default directory
+            output_dir = args.output_dir if args.output_dir != 'data' else None
+            service.save_requests_data(requests_data, output_dir)
+    elif args.operation == 'property-results':
+        print("Fetching property data results...")
+        from scripts.fetch_property_results import main as fetch_results_main
+        fetch_results_main()
+    elif args.operation == 'download-reports':
+        print("Downloading reports...")
+        from scripts.download_reports import main as download_reports_main
+        download_reports_main()
     elif args.operation == 'imagery':
         service = ImageryService(client)
         # For imagery, we need coordinates or addresses
@@ -97,7 +107,9 @@ def main():
             lon = coord["lon"]
             imagery_data = service.request_imagery_for_location(name, lat, lon)
             if imagery_data:
-                service.save_imagery_data(imagery_data, name, lat, lon, args.output_dir)
+                # For imagery operations, don't override the service's default directory
+                output_dir = args.output_dir if args.output_dir != 'data' else None
+                service.save_imagery_data(imagery_data, name, lat, lon, output_dir)
     elif args.operation == 'download-images':
         service = ImageDownloadService(client)
         # For download-images, we need property data results
@@ -108,7 +120,7 @@ def main():
             import glob
             # Look for recent property data files
             data_dir = args.output_dir
-            property_data_pattern = os.path.join(data_dir, "results", "*property_data_result*.json")
+            property_data_pattern = os.path.join(data_dir, "property_results", "*property_data_result*.json")
             property_data_files = glob.glob(property_data_pattern)
             
             if property_data_files:
@@ -176,7 +188,9 @@ def run_demo(client, output_dir: str, settings):
     
     requests_data = property_service.submit_coordinates_requests(coordinates)
     if requests_data:
-        property_service.save_requests_data(requests_data, output_dir)
+        # For property data requests in demo, don't override the service's default directory
+        requests_output_dir = output_dir if output_dir != 'data' else None
+        property_service.save_requests_data(requests_data, requests_output_dir)
         print(f"   Submitted {len(requests_data)} property data requests")
     
     # 2. Imagery requests
@@ -191,7 +205,9 @@ def run_demo(client, output_dir: str, settings):
         try:
             imagery_data = imagery_service.request_imagery_for_location(name, lat, lon)
             if imagery_data:
-                imagery_service.save_imagery_data(imagery_data, name, lat, lon, output_dir)
+                # For imagery operations in demo, don't override the service's default directory
+                imagery_output_dir = output_dir if output_dir != 'data' else None
+                imagery_service.save_imagery_data(imagery_data, name, lat, lon, imagery_output_dir)
                 print(f"   Retrieved imagery for {name}")
         except ValueError as e:
             print(f"   Skipped imagery for {name}: {e}")

@@ -104,6 +104,19 @@ class ImageryService:
                     logger.error(f"  Failed to get imagery after {retry_count} attempts")
                     return None
     
+    def get_sandbox_coordinates(self) -> List[Dict[str, float]]:
+        """Get default coordinates within the sandbox area.
+        
+        Returns:
+            A list of coordinate dictionaries with 'lat' and 'lon' keys
+        """
+        # Bounding box: -96.00532698173473, 41.24140396772262, -95.97589954958912, 41.25672882015283
+        return [
+            {"lat": 41.25, "lon": -95.99},
+            {"lat": 41.245, "lon": -95.98},
+            {"lat": 41.255, "lon": -96.0}
+        ]
+    
     def save_imagery_data(self, imagery_data: Dict, name: str, lat: float, lon: float, 
                          output_dir: str = None) -> bool:
         """Save imagery data to a JSON file.

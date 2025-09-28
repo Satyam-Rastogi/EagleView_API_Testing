@@ -48,8 +48,9 @@ Thumbs.db
 # Output directories - ignore user-generated data but keep structure
 data/cache/*
 data/imagery/* 
-data/requests/*
-data/results/*
+data/property_requests/*
+data/property_results/*
+data/property_reports/*
 data/tokens/*
 
 # Specific sensitive token file
@@ -61,7 +62,8 @@ config/eagleview_sandbox.yaml
 config/eagleview_production.yaml
 
 # Log files
-*.log
+logs/
+logs/* 
 
 # Zip files
 *.zip
@@ -76,12 +78,32 @@ docs/_build/
 
 # Generated API data files (keep structure but ignore user-generated content)
 *_tokens.json
-*_requests_*.json
-*_reports_*.json
-*_results_*.json
+*_property_requests_*.json
+*_property_reports_*.json
+*_property_results_*.json
 *_imagery_summary_*.json
 
 # Test files with sensitive data
 tests/sensitive_data/
 tests/integration/test_credentials.py
 tests/unit/test_credentials.py
+
+# Team demonstration files
+TEAM_DEMONSTRATION_GUIDE.md
+TEAM_PRESENTATION_SCRIPT.md
+run_demo_for_team.py
+simple_demo_runner.py
+PRODUCTION_TESTING_README.md
+PRODUCTION_ENVIRONMENT_SUMMARY.md
+demo_all_prod_functionalities.py
+demo_image_download_prod.py
+test_production_auth.py
+
+# Production environment files (contain sensitive credentials)
+production.env
+
+# Demo data and test results
+data/production_demo/
+data/production_images/
+data/production_auth_test.json
+data/production_auth_error.json

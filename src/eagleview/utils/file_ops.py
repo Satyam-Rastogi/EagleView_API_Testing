@@ -130,7 +130,8 @@ def get_data_directory(subdirectory: str = "") -> str:
     Returns:
         Full path to the data subdirectory
     """
-    project_root = Path(__file__).parent.parent.parent
+    # Go up 3 levels from src/eagleview/utils to get to the project root
+    project_root = Path(__file__).parent.parent.parent.parent
     if subdirectory:
         return str(project_root / "data" / subdirectory)
     return str(project_root / "data")
@@ -163,8 +164,10 @@ def setup_logging(name: str, level: str = "INFO") -> logging.Logger:
         console_handler.setFormatter(formatter)
         logger.addHandler(console_handler)
         
-        # File handler
-        log_file = f"{name.lower()}_{datetime.now().strftime('%Y%m%d')}.log"
+        # File handler - ensure logs go to logs directory
+        logs_dir = "logs"
+        os.makedirs(logs_dir, exist_ok=True)  # Create logs directory if it doesn't exist
+        log_file = os.path.join(logs_dir, f"{name.lower()}_{datetime.now().strftime('%Y%m%d')}.log")
         file_handler = logging.FileHandler(log_file)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
