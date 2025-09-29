@@ -1,0 +1,17 @@
+eagleview:
+  # Production credentials
+  client_id: "0oa171j4m9bnFTVek2p8"
+  client_secret: "NzyIdqGywOxcav9hYxohy72XmNS0Aj_zEHUsnqL7LCtyMnCVxAFDcYCCSdU7Tigq"
+  
+  # Switch to production environment
+  is_sandbox: false
+  
+  # Production rate limits (higher than sandbox)
+  requests_per_second: 10.0
+  requests_per_minute: 200
+  
+  # Output directory for production data
+  output_directory: "data"
+  
+  # Logging level appropriate for production
+  log_level: "INFO"

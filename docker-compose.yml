@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  eagleview-client:
+    build: .
+    container_name: eagleview-api-client
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./.env:/app/.env
+    environment:
+      - EAGLEVIEW_CLIENT_ID=${EAGLEVIEW_CLIENT_ID}
+      - EAGLEVIEW_CLIENT_SECRET=${EAGLEVIEW_CLIENT_SECRET}
+      - EAGLEVIEW_REQUESTS_PER_SECOND=${EAGLEVIEW_REQUESTS_PER_SECOND:-3}
+      - EAGLEVIEW_REQUESTS_PER_MINUTE=${EAGLEVIEW_REQUESTS_PER_MINUTE:-50}
+      - EAGLEVIEW_IS_SANDBOX=${EAGLEVIEW_IS_SANDBOX:-true}
+      - EAGLEVIEW_OUTPUT_DIR=${EAGLEVIEW_OUTPUT_DIR:-data}
+      - EAGLEVIEW_LOG_LEVEL=${EAGLEVIEW_LOG_LEVEL:-INFO}
+    stdin_open: true
+    tty: true
+    command: ["python", "-m", "cli.eagleview", "--help"]
+
+  eagleview-demo:
+    build: .
+    container_name: eagleview-demo
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./.env:/app/.env
+    environment:
+      - EAGLEVIEW_CLIENT_ID=${EAGLEVIEW_CLIENT_ID}
+      - EAGLEVIEW_CLIENT_SECRET=${EAGLEVIEW_CLIENT_SECRET}
+    stdin_open: true
+    tty: true
+    command: ["python", "-m", "cli.eagleview", "--operation", "demo"]
+
+  eagleview-dev:
+    build: .
+    container_name: eagleview-dev
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./.env:/app/.env
+    environment:
+      - EAGLEVIEW_CLIENT_ID=${EAGLEVIEW_CLIENT_ID}
+      - EAGLEVIEW_CLIENT_SECRET=${EAGLEVIEW_CLIENT_SECRET}
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]

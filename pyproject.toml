@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eagleview-api-client"
+dynamic = ["version"]
+description = "A Python client library and example programs for interacting with the EagleView API"
+readme = "README.md"
+authors = [{name = "Satyam Rastogi", email = "satyamrastogi302@gmail.com"}]
+license = {text = "Proprietary"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.25.0,<3.0.0",
+    "PyYAML>=5.4.0,<7.0.0",
+    "python-dotenv>=0.19.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.10",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.812",
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/Satyam-Rastogi/EagleView_API_Testing/"
+Repository = "https://github.com/Satyam-Rastogi/EagleView_API_Testing/"
+Documentation = "https://github.com/Satyam-Rastogi/EagleView_API_Testing/blob/master/README.md"
+
+[project.scripts]
+eagleview = "cli.eagleview:main"
+eagleview-demo = "demo_run:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=src --cov-report=html --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
